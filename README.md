@@ -18,8 +18,6 @@ movements.dat to set the movement of the meshes (from mesh file folder), rotatio
 restart.dat file to  continue to run the simulation from certain time
 
 2) output:  time/statistic results of simulations
-Particle.dat: particle position, velocity, forces etc information
-Engdisp.dat 
 
 3) src:  source code: to generate execute file, input make to compile the code
 AllocateArrays.cpp: to allocate cpu, gpu arrays
