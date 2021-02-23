@@ -1,7 +1,7 @@
 # Sample C++ codes 
 C++/CUDA C codes for GPU-based DEM for a ship loading process developed by Dr. Gan using C/C++ for CPU part and CUDA C for GPU part. GPU codes are not included in the repo. 
 
-Simple user guide:
+Simple user guide: 
 Code composition: 
 1) input folder
 2) src folder for source codes
@@ -16,7 +16,6 @@ material.dat:  to set material properties
 meshinfo.dat: mesh number/name, offset, scale factor
 movements.dat to set the movement of the meshes (from mesh file folder), rotation/translation/vibration
 restart.dat file to  continue to run the simulation from certain time
-
 2) output:  time/statistic results of simulations
 
 3) src:  source code: to generate execute file, input make to compile the code
