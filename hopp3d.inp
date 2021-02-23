@@ -1,0 +1,26 @@
+1
+1500000 5170 1.0 
+0.00001 2400000000.0
+4.0 0.5 
+6.5e-20 1.0e-9 0
+2.0 0.01 0
+-0.0 -0.00 -0.0 0.0 0.00  0.00
+2 100  40   0
+1  0  0
+100000 500000 1000000 5000000 1000000
+
+
+//------------------------------------------------------
+//---------output data for check----------------------------
+       printf("%d\n", iop_fn);	
+//-------------------------------------
+       printf("%d %lf %lf\n", ntot,denp,p_jpolfac);
+       printf("%lf %lf\n", dt, tstop);
+       printf("%lf %lf\n", vel0,tnewpar);
+       printf("%le %le %d\n",hamaker,cutoffdis,icalculateFvdw);
+       printf("%lf %lf %d\n",bondforceratio,bondmaxgap,icalculateFvdw);
+       printf("%lf %lf %lf %lf %lf %lf",
+                  m_houtmin[0],m_houtmin[1],m_houtmin[2],m_houtmax[0],m_houtmax[1],m_houtmax[2]);
+       printf("%d  %d %d\n",devnum,maxCnPerParticle,maxFacePerGrid);
+                  printf("%d %d %d\n",DivX,DivY,DivZ);
+       printf("%d %d %d %lf\n",freqppor,freqparticle,freqftv,freqpreflow);

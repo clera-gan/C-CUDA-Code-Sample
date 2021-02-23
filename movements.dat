@@ -1,0 +1,53 @@
+1 0 0
+2 0.0 10.0 4.8 0.0  0.0
+
+
+//note for input data:
+    fscanf(fp1,"%d %d %d ", &NumOfTranslation,&NumOfRotation,&NumOfVibration);
+    for(i=0;i<NumOfTranslation;i++)
+    {
+    fscanf(fp1,"%d %lf %lf %lf %lf %lf",
+            &m_hTranslation[i].meshId, &m_hTranslation[i].starttime,&m_hTranslation[i].endtime,&m_hTranslation[i].speed.x,&m_hTranslation[i].speed.y,&m_hTranslation[i].speed.z);
+    }
+    }
+
+    for(i=0;i<NumOfRotation;i++)
+    {
+    fscanf(fp1,"%d %lf %lf %lf %lf %lf %lf %lf %lf %lf",
+            &m_hRotation[i].meshId,&m_hRotation[i].starttime,&m_hRotation[i].endtime,&m_hRotation[i].axis.x,&m_hRotation[i].axis.y,&m_hRotation[i].axis.z,&m_hRotation[i].pointonaxis.x,&m_hRotation[i].pointonaxis.y,&m_hRotation[i].pointonaxis.z,&m_hRotation[i].rotatespeed);
+    }
+
+    for(i=0;i<NumOfVibration;i++)
+    {
+    fscanf(fp1,"%d %lf %lf %lf %lf %lf",
+           &m_hVibration[i].meshId,&m_hVibration[i].starttime,&m_hVibration[i].endtime,&m_hVibration[i].amplitude,&m_hVibration[i].frequency,&m_hVibration[i].startangle);
+    }
+
+struct Rotation
+{
+uint meshId;
+double starttime;
+double endtime;
+double3 axis;
+double3 pointonaxis;
+double rotatespeed;
+};
+
+struct Vibration
+{
+uint meshId;
+double starttime;
+double endtime;
+double3 axis;
+double amplitude;
+double frequency;
+double startangle;
+};
+
+struct Translation
+{
+uint meshId;
+double starttime;
+double endtime;
+double3 speed;
+};

@@ -1,0 +1,36 @@
+1
+ore -1.15 -0.3 -0.2 0.2 0.5 1.2 0.0 10.0 0.2 36937
+
+36032
+ore -1.3 -0.3 -0.3 0.3 0.8 1.2 0.0 10.0 0.2 36937
+36937
+//note for input data:
+    fscanf(fp1,"%d", &NumOfFeed);
+ 
+    for(i=0;i<NumOfFeed;i++)
+    {
+    fscanf(fp1,"%s %lf %lf %lf %lf %lf %lf %lf %lf %lf %d", 
+      &matname,&m_hfeedpro[i].xmin,&m_hfeedpro[i].xmax,&m_hfeedpro[i].ymin, \
+                &m_hfeedpro[i].ymax,&m_hfeedpro[i].zmin,&m_hfeedpro[i].zmax,\
+                &m_hfeedpro[i].starttime,&m_hfeedpro[i].endtime,\
+                &m_hfeedpro[i].freq,&m_hfeedpro[i].feedParNum);
+
+    for(j=0;j<NumOfMat;j++) 
+     {
+     if(strcmp(matname, m_hmatpro[j].name)==0)
+     m_hfeedpro[i].matId=j;
+     break;
+     }
+     if(i==NumOfFeed)m_hfeedpro[i].matId=0;
+     }
+
+struct Feedproperties{
+          char *name,
+	 double xmin,xmax;
+	 double ymin,ymax;
+	 double zmin,zmax;
+          double starttime;
+          double endtime;
+        double freq;
+        uint feedParNum;
+       };

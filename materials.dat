@@ -1,0 +1,52 @@
+1
+ore  5170.0 100000000.0 0.6 0.6 0.6 0.29 0.003575 9 
+	0.03575	0.02825	0.0225	0.0175	0.01325	 0.0110	0.00875	0.00715	0.00465
+ 	82	247	 462	1818	1094 	4124 	3503	5281	20330
+
+
+		 
+       		
+
+        19831	5152 	3417 	4023	1064	1774	 451	 241	 80
+        20330	5281 	3503 	4124	1094	1818	 462	 247	 82
+
+//       303	188 	115 	101	 27	 9	 4	 1
+// note for input data:
+
+    for(i=0;i<NumOfMat;i++)
+    {
+    fscanf(fp1,"%s %lf %lf %lf %lf %lf %lf %lf %d", 
+            &m_hmatpro[i].name,&m_hmatpro[i].denp,&m_hmatpro[i].estarp,\
+            &m_hmatpro[i].ufric,&m_hmatpro[i].dampn, &m_hmatpro[i].dampt,\
+            &m_hmatpro[i].vp,&m_hmatpro[i].upp,&m_hmatpro[i].sizeNum);
+
+    for(j=0;j<m_hmatpro[i].sizeNum;j++)
+    {
+    fscanf(fp1,"%lf ",&m_hmatpro[i].sizedis[j].dia);
+    }
+     uint totalNum=0;
+    for(j=0;j<m_hmatpro[i].sizeNum;j++)
+    {
+    fscanf(fp1,"%d ",&m_hmatpro[i].sizedis[j].Num);
+      }
+    } //for(i=0;i<NumOfMat;i++)
+
+struct Matproperties {
+        char *name;
+        double denp;
+	 double estarp;
+        double ufric;
+        double dampn;
+        double dampt;
+	 double vp;
+        double upp;
+         int sizeNum;
+         sizedistribution sizedis[10];
+        };
+
+struct sizedistribution{
+        double dia;
+        uint Num;};
+
+
+number of size, size 1 2 3, weight fraction 1 2 3
