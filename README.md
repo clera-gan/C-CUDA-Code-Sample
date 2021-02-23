@@ -1,5 +1,7 @@
 # Sample C++ codes 
-C++/CUDA C codes for GPU-based DEM for a ship loading process developed by Dr. Gan using C/C++ for CPU part and CUDA C for GPU part. GPU codes are not included in the repo. 
+C++/CUDA C codes for GPU-based DEM for a ship loading process developed by Dr. Gan using C/C++ for CPU part and CUDA C for GPU part. GPU codes are not included in the repo. Please refer to papers[1-2] for more details:
+[1].	J. Gan, T. Evans, A. Yu, Impact energy dissipation study in a simulated ship loading process, Powder Technology, 354 (2019) 476-484.
+[2].	J. Gan, T. Evans, A. Yu, Application of GPU-DEM simulation on large-scale granular handling and processing in ironmaking related industries, Powder Technology, 361 (2020) 258-273.
 
 Code composition: 
 1) input folder
