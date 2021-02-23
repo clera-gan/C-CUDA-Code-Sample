@@ -9,16 +9,16 @@ Code composition:
 4) Executive code --“GDEM” file, to run the simulation
 5) job script --“case” file, for job management on linux system
 
-1) input: 
+input: 
 feed.dat to set feeding stream/mode/mass flowrate/feed material
 hopp3d.inp: general information
 material.dat:  to set material properties
 meshinfo.dat: mesh number/name, offset, scale factor
 movements.dat to set the movement of the meshes (from mesh file folder), rotation/translation/vibration
 restart.dat file to  continue to run the simulation from certain time
-2) output:  time/statistic results of simulations
+output:  time/statistic results of simulations
 
-3) src:  source code: to generate execute file, input make to compile the code
+src:  source code: to generate execute file, input make to compile the code
 AllocateArrays.cpp: to allocate cpu, gpu arrays
 Boundary.cpp : to set boundary functions
 Feed.cpp : to set feed functions
